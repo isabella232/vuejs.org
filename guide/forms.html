@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Handling Forms - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Lato|Inconsolata' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/vuejs.org/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <script src="/vuejs.org/js/vue.min.js"></script>
+        <link rel="stylesheet" href="/vuejs.org/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        
+            <div id="header">
+    <a id="logo" href="/vuejs.org/">
+        <img src="/vuejs.org/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li><a href="/vuejs.org/guide/" class="nav-link current">Guide</a></li>
+        <li><a href="/vuejs.org/api/" class="nav-link">API Reference</a></li>
+        <br class="break" />
+        <li><a href="/vuejs.org/examples/" class="nav-link">Examples</a></li>
+        <li><a href="/vuejs.org/blog/" class="nav-link">Blog</a></li>
+        <li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+    </ul>
+</div>
+
+        
+        <div id="main">
+        
+            
+    <div class="sidebar">
+    <div class="toggle">···</div>
+    <div class="list">
+        <h2>Guide</h2>
+        <ul>
+        
+            <li><a href="/vuejs.org/guide/installation.html" class="sidebar-link">Installation</a></li>
+        
+            <li><a href="/vuejs.org/guide/index.html" class="sidebar-link">Getting Started</a></li>
+        
+            <li><a href="/vuejs.org/guide/directives.html" class="sidebar-link">Directives In Depth</a></li>
+        
+            <li><a href="/vuejs.org/guide/filters.html" class="sidebar-link">Filters in Depth</a></li>
+        
+            <li><a href="/vuejs.org/guide/list.html" class="sidebar-link">Displaying a List</a></li>
+        
+            <li><a href="/vuejs.org/guide/events.html" class="sidebar-link">Listening for Events</a></li>
+        
+            <li><a href="/vuejs.org/guide/forms.html" class="sidebar-link current">Handling Forms</a></li>
+        
+            <li><a href="/vuejs.org/guide/computed.html" class="sidebar-link">Computed Properties</a></li>
+        
+            <li><a href="/vuejs.org/guide/transitions.html" class="sidebar-link">Adding Transition Effects</a></li>
+        
+            <li><a href="/vuejs.org/guide/composition.html" class="sidebar-link">Composing Components</a></li>
+        
+            <li><a href="/vuejs.org/guide/application.html" class="sidebar-link">Building Larger Apps</a></li>
+        
+            <li><a href="/vuejs.org/guide/plugin.html" class="sidebar-link">Plugins</a></li>
+        
+        <li style="margin:10px 0 3px">
+          <script data-gittip-username="yyx990803"
+            data-gittip-widget="button"
+            src="//gttp.co/v1.js"></script>
+        </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>Handling Forms</h1>
+    <p>You can use the <code>v-model</code> directive to create two-way data bindings on form input elements and elements with <code>contenteditable</code> attribute. It automatically picks the correct way to update the element based on the input type.</p>
+<p><strong>Example</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- text --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">v-model</span>=<span class="value">"msg"</span>&gt;</span> &#123;&amp;#123;msg&amp;#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- checkbox --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">v-model</span>=<span class="value">"checked"</span>&gt;</span> &#123;&amp;#123;checked ? &amp;quot;yes&amp;quot; : &amp;quot;no&amp;quot;&amp;#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- radio buttons --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"picked"</span> <span class="attribute">value</span>=<span class="value">"one"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"picked"</span> <span class="attribute">value</span>=<span class="value">"two"</span> <span class="attribute">v-model</span>=<span class="value">"picked"</span>&gt;</span></span><br><span class="line">        &#123;&amp;#123;picked&amp;#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- select --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"selected"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">option</span>&gt;</span>one<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">option</span>&gt;</span>two<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line">        &#123;&amp;#123;selected&amp;#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- multiple select --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">select</span> <span class="attribute">v-model</span>=<span class="value">"multiSelect"</span> <span class="attribute">multiple</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">option</span>&gt;</span>one<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">option</span>&gt;</span>two<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">option</span>&gt;</span>three<span class="tag">&lt;/<span class="title">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">select</span>&gt;</span></span><br><span class="line">        &#123;&amp;#123;multiSelect&amp;#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>data: &#123;&amp;#123;$data&amp;#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#demo'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        msg      : <span class="string">'hi!'</span>,</span><br><span class="line">        checked  : <span class="literal">true</span>,</span><br><span class="line">        picked   : <span class="string">'one'</span>,</span><br><span class="line">        selected : <span class="string">'two'</span>,</span><br><span class="line">        multiSelect: [<span class="string">'one'</span>, <span class="string">'three'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>Result</strong></p>
+<p><form id="demo"><p><input type="text" v-model="msg"> {&#123;msg&#125;}</p><p><input type="checkbox" v-model="checked"> {&#123;checked ? &quot;yes&quot; : &quot;no&quot;&#125;}</p><p><input type="radio" v-model="picked" name="picked" value="one"><input type="radio" v-model="picked" name="picked" value="two"> {&#123;picked&#125;}</p><p><select v-model="selected"><option>one</option><option>two</option></select> {&#123;selected&#125;}</p><p><select v-model="multiSelect" multiple><option>one</option><option>two</option><option>three</option></select>{&#123;multiSelect&#125;}</p><p>data: {&#123;$data&#125;}</p></form></p>
+<script>
+new Vue({
+    el: '#demo',
+    data: {
+        msg      : 'hi!',
+        checked  : true,
+        picked   : 'one',
+        selected : 'two',
+        multiSelect: ['one', 'three']
+    }
+})
+</script>
+
+<p>Next: <a href="/guide/computed.html">Computed Properties</a>.</p>
+
+    <div class="footer">Caught a mistake or want to contribute to the documentation? <a href="https://github.com/vuejs/vuejs.org" target="_blank">Fork this site on Github</a>!</div>
+</div>
+        
+        </div>
+        <script src="/js/common.js"></script>
+    </body>
+</html>
