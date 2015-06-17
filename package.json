@@ -18,6 +18,7 @@
     "hexo-server": "^0.1.2"
   },
   "scripts": {
-    "hexo": "hexo server -p 5000"
+    "hexo-generate": "hexo generate",
+    "hexo-deploy": "hexo deploy"
   }
 }
