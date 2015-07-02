@@ -118,11 +118,11 @@
 <li>This directive requires an argument.</li>
 <li>This directive requires the value to be a Function or an expression.</li>
 </ul>
-<p>Attaches an event listener to the element. The event type is denoted by the argument. It is also the only directive that can be used with the <code>key</code> filter. For more details see <a href="/guide/events.html">Listening for Events</a>.</p>
+<p>Attaches an event listener to the element. The event type is denoted by the argument. It is also the only directive that can be used with the <code>key</code> filter. For more details see <a href="/vuejs.org/guide/events.html">Listening for Events</a>.</p>
 <h3 id="v-model">v-model</h3><ul>
 <li>This directive can only be used on INPUT, SELECT, TEXTAREA and elements with <code>contenteditable</code> attribute.</li>
 </ul>
-<p>Create a two-way binding on a form or editable element. Data is synced on every <code>input</code> event by default. When the ViewModel has the <code>lazy</code> option set to true, data will be synced only on <code>change</code> events. For more details see <a href="/guide/forms.html">Handling Forms</a>.</p>
+<p>Create a two-way binding on a form or editable element. Data is synced on every <code>input</code> event by default. When the ViewModel has the <code>lazy</code> option set to true, data will be synced only on <code>change</code> events. For more details see <a href="/vuejs.org/guide/forms.html">Handling Forms</a>.</p>
 <h3 id="v-if">v-if</h3><ul>
 <li>This directive creates child ViewModels.</li>
 <li>This directive can trigger transitions.</li>
@@ -140,12 +140,12 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"users"</span>&gt;</span></span><br><span class="line">        &#123;&amp;#123;name&amp;#125;&#125; &#123;&amp;#123;email&amp;#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>If an argument is provided, a wrapper data object will always be created, using the argument string as the alias key. This allows for more explicit property access in templates:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-repeat</span>=<span class="value">"user : users"</span>&gt;</span></span><br><span class="line">        &#123;&amp;#123;user.name&amp;#125;&#125; &#123;&amp;#123;user.email&amp;#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>For detailed examples, see <a href="/guide/list.html">Displaying a List</a>.</p>
+<p>For detailed examples, see <a href="/vuejs.org/guide/list.html">Displaying a List</a>.</p>
 <h3 id="v-view">v-view</h3><ul>
 <li>This directive creates child ViewModels.</li>
 <li>This directive can trigger transitions.</li>
 </ul>
-<p>Conditionally instantiate ViewModels, using the bound value as the Component ID to look up constructors with. When the bound value changes, existing ViewModel will be destroyed and a new ViewModel will be created. When a ViewModel is created, the original element will be replaced, but all attributes will be copied to the new element. For more details, see <a href="/guide/application.html#Routing">Routing</a>.</p>
+<p>Conditionally instantiate ViewModels, using the bound value as the Component ID to look up constructors with. When the bound value changes, existing ViewModel will be destroyed and a new ViewModel will be created. When a ViewModel is created, the original element will be replaced, but all attributes will be copied to the new element. For more details, see <a href="/vuejs.org/guide/application.html#Routing">Routing</a>.</p>
 <h3 id="v-with">v-with</h3><ul>
 <li>This directive must be used with another directive that creates child ViewModels.</li>
 <li>This directive accepts only keypaths, no expressions.</li>
@@ -159,19 +159,19 @@
 <h2 id="Literal_Directives">Literal Directives</h2><blockquote>
 <p>Literal directives treat their attribute value as a plain string; they do not attempt to bind themselves to anything. All they do is executing the <code>bind()</code> function with the string value once. Literal directives accept mustache expressions inside their value, but these expressions will be evaluated only once on first compile and do not react to data changes.</p>
 </blockquote>
-<h3 id="v-component">v-component</h3><p>Compile this element as a child ViewModel with a registered component constructor. This can be used with <code>v-with</code> to inehrit data from the parent. For more details see <a href="/guide/composition.html">Composing ViewModels</a>.</p>
-<h3 id="v-ref">v-ref</h3><p>Only respected when used in combination with directives that create child components: <code>v-component</code>, <code>v-view</code>, <code>v-if</code> or <code>v-repeat</code>. The ViewModel will be accessible in its parent’s <code>$</code> object, e.g. <code>parent.$[id]</code>. When used with <code>v-repeat</code>, the value will be an Array containing the child ViewModel instances corresponding to the Array they are bound to. For examples see <a href="/guide/composition.html#Accessing_Child_Components">Accessing Child Components</a>.</p>
+<h3 id="v-component">v-component</h3><p>Compile this element as a child ViewModel with a registered component constructor. This can be used with <code>v-with</code> to inehrit data from the parent. For more details see <a href="/vuejs.org/guide/composition.html">Composing ViewModels</a>.</p>
+<h3 id="v-ref">v-ref</h3><p>Only respected when used in combination with directives that create child components: <code>v-component</code>, <code>v-view</code>, <code>v-if</code> or <code>v-repeat</code>. The ViewModel will be accessible in its parent’s <code>$</code> object, e.g. <code>parent.$[id]</code>. When used with <code>v-repeat</code>, the value will be an Array containing the child ViewModel instances corresponding to the Array they are bound to. For examples see <a href="/vuejs.org/guide/composition.html#Accessing_Child_Components">Accessing Child Components</a>.</p>
 <h3 id="v-partial">v-partial</h3><p>Replace the element’s innerHTML with a registered partial. Partials can be registered with <code>Vue.partial()</code> or passed inside the <code>partials</code> option. You can also use this syntax (which doesn’t support expressions):</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>&amp;#123;&amp;#123;&gt; my-partial&amp;#125;&amp;#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="v-effect">v-effect</h3><p>Apply a registered JavaScript effect to the element. JavaScript effects can be registered with <code>Vue.effect()</code> or passed inside the <code>effects</code> option.</p>
-<p>For details, see <a href="/guide/transitions.html#JavaScript_Functions">the guide</a>.</p>
+<p>For details, see <a href="/vuejs.org/guide/transitions.html#JavaScript_Functions">the guide</a>.</p>
 <h2 id="Empty_Directives">Empty Directives</h2><blockquote>
 <p>Empty directives do not require and will ignore their attribute value.</p>
 </blockquote>
 <h3 id="v-transition">v-transition</h3><p>Notify Vue.js to apply transition CSS classes to this element. The transition classes are applied when certain transition-triggering directives modify the element, or when the ViewModel’s DOM manipulation methods are called.</p>
-<p>For details, see <a href="/guide/transitions.html#Css_Transitions">the guide</a>.</p>
+<p>For details, see <a href="/vuejs.org/guide/transitions.html#Css_Transitions">the guide</a>.</p>
 <h3 id="v-animation">v-animation</h3><p>Notify Vue.js to apply animation CSS classes to this element. The order of CSS class application is different from <code>v-transition</code>.</p>
-<p>For details, see <a href="/guide/transitions.html#Css_Animations">the guide</a>.</p>
+<p>For details, see <a href="/vuejs.org/guide/transitions.html#Css_Animations">the guide</a>.</p>
 <h3 id="v-pre">v-pre</h3><p>Skip compilation for this element and all its children. Skipping large numbers of nodes with no directives on them can speed up compilation.</p>
 <h3 id="v-cloak">v-cloak</h3><p>This property remains on the element until the associated ViewModel finishes compilation. Combined with CSS rules such as <code>[v-cloak] { display: none }</code>, this directive can be used to hide un-compiled mustache bindings until the ViewModel is ready.</p>
 

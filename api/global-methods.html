@@ -78,7 +78,7 @@
     <h3 id="Vue-extend(_options_)">Vue.extend( options )</h3><ul>
 <li><strong>options</strong> <code>Object</code></li>
 </ul>
-<p>Create a subclass of the Vue class. Most <a href="/api/instantiation-options.html">instantiation options</a> can be used here, with the exception of the <code>el</code> option because you can’t create multiple ViewModel instances on the same element. Also see <a href="/guide/composition.html">Composing ViewModels</a>.</p>
+<p>Create a subclass of the Vue class. Most <a href="/vuejs.org/api/instantiation-options.html">instantiation options</a> can be used here, with the exception of the <code>el</code> option because you can’t create multiple ViewModel instances on the same element. Also see <a href="/vuejs.org/guide/composition.html">Composing ViewModels</a>.</p>
 <p><strong>Example</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Profile = Vue.extend(&#123;</span><br><span class="line">    tagName: <span class="string">'P'</span>,</span><br><span class="line">    template: <span class="string">'&amp;#123;&amp;#123;firstName&amp;#125;&amp;#125; &amp;#123;&amp;#123;lastName&amp;#125;&amp;#125; aka &amp;#123;&amp;#123;alias&amp;#125;&amp;#125;'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> profile = <span class="keyword">new</span> Profile(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        firstName : <span class="string">'Walter'</span>,</span><br><span class="line">        lastName  : <span class="string">'White'</span>,</span><br><span class="line">        alias     : <span class="string">'Heisenberg'</span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">profile.$appendTo(<span class="string">'body'</span>)</span><br></pre></td></tr></table></figure>
 <p>Will result in:</p>
@@ -96,22 +96,22 @@
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Function</code> or <code>Object</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global custom directive. For more details see <a href="/guide/directives.html#Writing_a_Custom_Directive">Writing Custom Directives</a>.</p>
+<p>Register or retrieve a global custom directive. For more details see <a href="/vuejs.org/guide/directives.html#Writing_a_Custom_Directive">Writing Custom Directives</a>.</p>
 <h3 id="Vue-filter(_id,_definition_)">Vue.filter( id, definition )</h3><ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Function</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global custom filter. For more details see <a href="/guide/filters.html#Writing_a_Custom_Filter">Writing Custom Filters</a>.</p>
+<p>Register or retrieve a global custom filter. For more details see <a href="/vuejs.org/guide/filters.html#Writing_a_Custom_Filter">Writing Custom Filters</a>.</p>
 <h3 id="Vue-component(_id,_definition_)">Vue.component( id, definition )</h3><ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Function Constructor</code> or <code>Object</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global component. For more details see <a href="/guide/composition.html">Composing ViewModels</a>.</p>
+<p>Register or retrieve a global component. For more details see <a href="/vuejs.org/guide/composition.html">Composing ViewModels</a>.</p>
 <h3 id="Vue-effect(_id,_definition_)">Vue.effect( id, definition )</h3><ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>Object</code> <em>optional</em></li>
 </ul>
-<p>Register or retrieve a global JavaScript transition effect definition. For more details see <a href="/guide/transitions.html#JavaScript_Functions">Adding Transition Effects</a>.</p>
+<p>Register or retrieve a global JavaScript transition effect definition. For more details see <a href="/vuejs.org/guide/transitions.html#JavaScript_Functions">Adding Transition Effects</a>.</p>
 <h3 id="Vue-partial(_id,_definition_)">Vue.partial( id, definition )</h3><ul>
 <li><strong>id</strong> <code>String</code></li>
 <li><strong>definition</strong> <code>String</code> or <code>HTMLElement</code> <em>optional</em></li>
@@ -142,7 +142,7 @@
 <li><strong>plugin</strong> <code>Object</code> or <code>Function</code></li>
 <li><strong>args…</strong> <em>optional</em></li>
 </ul>
-<p>Mount a Vue.js plugin. If the plugin is an Object, it must have an <code>install</code> method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument. For more details, see <a href="/guide/plugin.html">Plugins</a>.</p>
+<p>Mount a Vue.js plugin. If the plugin is an Object, it must have an <code>install</code> method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument. For more details, see <a href="/vuejs.org/guide/plugin.html">Plugins</a>.</p>
 
     <div class="footer">Caught a mistake or want to contribute to the documentation? <a href="https://github.com/vuejs/vuejs.org" target="_blank">Fork this site on Github</a>!</div>
 </div>
