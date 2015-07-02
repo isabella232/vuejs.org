@@ -7,7 +7,7 @@ order: 5
 
 - **options** `Object`
 
-Create a subclass of the Vue class. Most [instantiation options](/api/instantiation-options.html) can be used here, with the exception of the `el` option because you can't create multiple ViewModel instances on the same element. Also see [Composing ViewModels](/guide/composition.html).
+Create a subclass of the Vue class. Most [instantiation options](/vuejs.org/api/instantiation-options.html) can be used here, with the exception of the `el` option because you can't create multiple ViewModel instances on the same element. Also see [Composing ViewModels](/vuejs.org/guide/composition.html).
 
 **Example**
 
@@ -87,28 +87,28 @@ Here are all the options with their default values:
 - **id** `String`
 - **definition** `Function` or `Object` *optional*
 
-Register or retrieve a global custom directive. For more details see [Writing Custom Directives](/guide/directives.html#Writing_a_Custom_Directive).
+Register or retrieve a global custom directive. For more details see [Writing Custom Directives](/vuejs.org/guide/directives.html#Writing_a_Custom_Directive).
 
 ### Vue.filter( id, definition )
 
 - **id** `String`
 - **definition** `Function` *optional*
 
-Register or retrieve a global custom filter. For more details see [Writing Custom Filters](/guide/filters.html#Writing_a_Custom_Filter).
+Register or retrieve a global custom filter. For more details see [Writing Custom Filters](/vuejs.org/guide/filters.html#Writing_a_Custom_Filter).
 
 ### Vue.component( id, definition )
 
 - **id** `String`
 - **definition** `Function Constructor` or `Object` *optional*
 
-Register or retrieve a global component. For more details see [Composing ViewModels](/guide/composition.html).
+Register or retrieve a global component. For more details see [Composing ViewModels](/vuejs.org/guide/composition.html).
 
 ### Vue.effect( id, definition )
 
 - **id** `String`
 - **definition** `Object` *optional*
 
-Register or retrieve a global JavaScript transition effect definition. For more details see [Adding Transition Effects](/guide/transitions.html#JavaScript_Functions).
+Register or retrieve a global JavaScript transition effect definition. For more details see [Adding Transition Effects](/vuejs.org/guide/transitions.html#JavaScript_Functions).
 
 ### Vue.partial( id, definition )
 
@@ -170,4 +170,4 @@ Get access to Vue.js' internal modules. This is intended for plugin authors and 
 - **plugin** `Object` or `Function`
 - **args...** *optional*
 
-Mount a Vue.js plugin. If the plugin is an Object, it must have an `install` method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument. For more details, see [Plugins](/guide/plugin.html).
+Mount a Vue.js plugin. If the plugin is an Object, it must have an `install` method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument. For more details, see [Plugins](/vuejs.org/guide/plugin.html).

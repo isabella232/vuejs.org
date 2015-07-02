@@ -19,6 +19,7 @@
   },
   "scripts": {
     "hexo-generate": "hexo generate",
+    "hexo-server": "hexo server",
     "hexo-deploy": "hexo deploy"
   }
 }

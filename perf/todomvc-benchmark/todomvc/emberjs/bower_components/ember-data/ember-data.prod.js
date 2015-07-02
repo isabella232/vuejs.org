@@ -3432,7 +3432,7 @@ function addUnsavedRecords(record, key, data) {
   updated when the promise resolves.
 
   For more information see the [Ember.PromiseProxyMixin
-  documentation](/api/classes/Ember.PromiseProxyMixin.html).
+  documentation](/vuejs.org/api/classes/Ember.PromiseProxyMixin.html).
 
   Example
 
@@ -3462,7 +3462,7 @@ DS.PromiseArray = Ember.ArrayProxy.extend(Ember.PromiseProxyMixin);
   be updated when the promise resolves.
 
   For more information see the [Ember.PromiseProxyMixin
-  documentation](/api/classes/Ember.PromiseProxyMixin.html).
+  documentation](/vuejs.org/api/classes/Ember.PromiseProxyMixin.html).
 
   Example
 

@@ -67,4 +67,4 @@ e.g. RequireJS, SeaJS: Built versions in `/dist` or installed via Bower is wrapp
 
 ## Ready?
 
-[Let's Get Started](/guide/).
+[Let's Get Started](/vuejs.org/guide/).

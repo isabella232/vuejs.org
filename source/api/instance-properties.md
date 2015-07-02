@@ -36,13 +36,13 @@ new Vue({
 - **Type:** `Object`
 - **Read only**
 
-An object that holds child ViewModels that have `v-ref` registered. For more details see [v-ref](/api/directives.html#v-ref).
+An object that holds child ViewModels that have `v-ref` registered. For more details see [v-ref](/vuejs.org/api/directives.html#v-ref).
 
 ### vm.$index
 
 - **Type:** `Number`
 
-The Array index of a child ViewModel created by `v-repeat`. For more details see [v-repeat](/api/directives.html#v-repeat).
+The Array index of a child ViewModel created by `v-repeat`. For more details see [v-repeat](/vuejs.org/api/directives.html#v-repeat).
 
 ### vm.$parent
 

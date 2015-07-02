@@ -216,4 +216,4 @@ Then you can use it by providing the effect id to `v-effect`:
 <p v-effect="my-effect"></p>
 ```
 
-Next: [Composing ViewModels](/guide/composition.html).
+Next: [Composing ViewModels](/vuejs.org/guide/composition.html).

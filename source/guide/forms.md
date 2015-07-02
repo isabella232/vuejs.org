@@ -69,4 +69,4 @@ new Vue({
 })
 </script>
 
-Next: [Computed Properties](/guide/computed.html).
+Next: [Computed Properties](/vuejs.org/guide/computed.html).

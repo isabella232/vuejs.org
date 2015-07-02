@@ -4,4 +4,5 @@ db.json
 public
 .deploy
 debug.log
+npm-debug.log
 .deploy_git

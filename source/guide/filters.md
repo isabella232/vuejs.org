@@ -43,7 +43,7 @@ Some filters can take optional arguments. Simply add arguments separated by spac
 <input v-on="keyup: submitForm | key enter">
 ```
 
-For their specific use of the above examples see the [full list of built-in filters](/api/filters.html).
+For their specific use of the above examples see the [full list of built-in filters](/vuejs.org/api/filters.html).
 
 ## Writing a Custom Filter
 
@@ -100,4 +100,4 @@ For example, the built-in `filterBy` and `orderBy` filters are both computed fil
 
 If you find the concept of computed filters confusing at the moment, don't worry. It is handled automatically by Vue.js and you don't really need to know how it works to leverage it. As you get familiar with more related concepts, it will all make sense.
 
-Now that you know everything about directives and filters, let's talk about how to [display a list of items](/guide/list.html).
+Now that you know everything about directives and filters, let's talk about how to [display a list of items](/vuejs.org/guide/list.html).

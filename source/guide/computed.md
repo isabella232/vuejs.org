@@ -37,8 +37,8 @@ When you only need the getter, you can provide a single function instead of an o
 // ...
 computed: {
     fullName: function () {
-        return this.firstName + ' ' + this.lastName 
-    }    
+        return this.firstName + ' ' + this.lastName
+    }
 }
 // ...
 ```
@@ -76,4 +76,4 @@ status: function () {
 
 <p class="tip">You don't need to worry about this in inline expressions because Vue.js' expression parser takes care of it for you.</p>
 
-Next: [Adding Transition Effects](/guide/transitions.html)
+Next: [Adding Transition Effects](/vuejs.org/guide/transitions.html)

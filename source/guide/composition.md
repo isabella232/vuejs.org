@@ -208,7 +208,7 @@ When `v-ref` is used together with `v-repeat`, the value you get will be an Arra
 
 ## Event Communication Between Nested Components
 
-Although you can directly access a ViewModels children and parent, it is more convenient to use the built-in event system for cross-component communication. It also makes your code less coupled and easier to maintain. Once a parent-child relationship is established, you can dispatch and trigger events using each ViewModel's [event instance methods](/api/instance-methods.html#Cross-ViewModel_Events).
+Although you can directly access a ViewModels children and parent, it is more convenient to use the built-in event system for cross-component communication. It also makes your code less coupled and easier to maintain. Once a parent-child relationship is established, you can dispatch and trigger events using each ViewModel's [event instance methods](/vuejs.org/api/instance-methods.html#Cross-ViewModel_Events).
 
 ``` js
 var Child = Vue.extend({
@@ -356,4 +356,4 @@ The rendered result will be:
 
 The content insertion mechanism provides fine control over how original content should be manipulated or displayed, making components extremely flexible and composable.
 
-Next: [Building Larger Apps](/guide/application.html).
+Next: [Building Larger Apps](/vuejs.org/guide/application.html).

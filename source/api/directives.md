@@ -90,13 +90,13 @@ When the argument is prefixed with `$`, Vue.js will automatically apply prefixed
 - This directive requires an argument.
 - This directive requires the value to be a Function or an expression.
 
-Attaches an event listener to the element. The event type is denoted by the argument. It is also the only directive that can be used with the `key` filter. For more details see [Listening for Events](/guide/events.html).
+Attaches an event listener to the element. The event type is denoted by the argument. It is also the only directive that can be used with the `key` filter. For more details see [Listening for Events](/vuejs.org/guide/events.html).
 
 ### v-model
 
 - This directive can only be used on INPUT, SELECT, TEXTAREA and elements with `contenteditable` attribute.
 
-Create a two-way binding on a form or editable element. Data is synced on every `input` event by default. When the ViewModel has the `lazy` option set to true, data will be synced only on `change` events. For more details see [Handling Forms](/guide/forms.html).
+Create a two-way binding on a form or editable element. Data is synced on every `input` event by default. When the ViewModel has the `lazy` option set to true, data will be synced only on `change` events. For more details see [Handling Forms](/vuejs.org/guide/forms.html).
 
 ### v-if
 
@@ -136,14 +136,14 @@ If an argument is provided, a wrapper data object will always be created, using 
 </ul>
 ```
 
-For detailed examples, see [Displaying a List](/guide/list.html).
+For detailed examples, see [Displaying a List](/vuejs.org/guide/list.html).
 
 ### v-view
 
 - This directive creates child ViewModels.
 - This directive can trigger transitions.
 
-Conditionally instantiate ViewModels, using the bound value as the Component ID to look up constructors with. When the bound value changes, existing ViewModel will be destroyed and a new ViewModel will be created. When a ViewModel is created, the original element will be replaced, but all attributes will be copied to the new element. For more details, see [Routing](/guide/application.html#Routing).
+Conditionally instantiate ViewModels, using the bound value as the Component ID to look up constructors with. When the bound value changes, existing ViewModel will be destroyed and a new ViewModel will be created. When a ViewModel is created, the original element will be replaced, but all attributes will be copied to the new element. For more details, see [Routing](/vuejs.org/guide/application.html#Routing).
 
 ### v-with
 
@@ -186,11 +186,11 @@ Example inheriting individual properties (using the same data):
 
 ### v-component
 
-Compile this element as a child ViewModel with a registered component constructor. This can be used with `v-with` to inehrit data from the parent. For more details see [Composing ViewModels](/guide/composition.html).
+Compile this element as a child ViewModel with a registered component constructor. This can be used with `v-with` to inehrit data from the parent. For more details see [Composing ViewModels](/vuejs.org/guide/composition.html).
 
 ### v-ref
 
-Only respected when used in combination with directives that create child components: `v-component`, `v-view`, `v-if` or `v-repeat`. The ViewModel will be accessible in its parent's `$` object, e.g. `parent.$[id]`. When used with `v-repeat`, the value will be an Array containing the child ViewModel instances corresponding to the Array they are bound to. For examples see [Accessing Child Components](/guide/composition.html#Accessing_Child_Components).
+Only respected when used in combination with directives that create child components: `v-component`, `v-view`, `v-if` or `v-repeat`. The ViewModel will be accessible in its parent's `$` object, e.g. `parent.$[id]`. When used with `v-repeat`, the value will be an Array containing the child ViewModel instances corresponding to the Array they are bound to. For examples see [Accessing Child Components](/vuejs.org/guide/composition.html#Accessing_Child_Components).
 
 ### v-partial
 
@@ -204,7 +204,7 @@ Replace the element's innerHTML with a registered partial. Partials can be regis
 
 Apply a registered JavaScript effect to the element. JavaScript effects can be registered with `Vue.effect()` or passed inside the `effects` option.
 
-For details, see [the guide](/guide/transitions.html#JavaScript_Functions).
+For details, see [the guide](/vuejs.org/guide/transitions.html#JavaScript_Functions).
 
 ## Empty Directives
 
@@ -214,13 +214,13 @@ For details, see [the guide](/guide/transitions.html#JavaScript_Functions).
 
 Notify Vue.js to apply transition CSS classes to this element. The transition classes are applied when certain transition-triggering directives modify the element, or when the ViewModel's DOM manipulation methods are called.
 
-For details, see [the guide](/guide/transitions.html#Css_Transitions).
+For details, see [the guide](/vuejs.org/guide/transitions.html#Css_Transitions).
 
 ### v-animation
 
 Notify Vue.js to apply animation CSS classes to this element. The order of CSS class application is different from `v-transition`.
 
-For details, see [the guide](/guide/transitions.html#Css_Animations).
+For details, see [the guide](/vuejs.org/guide/transitions.html#Css_Animations).
 
 ### v-pre
 

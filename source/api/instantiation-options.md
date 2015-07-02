@@ -217,31 +217,31 @@ These are private assets that will be available only to this ViewModel and its c
 
 - **Type:** `Object`
 
-A hash of directives to be made available to the ViewModel. For details on how to write a custom directive, see [Writing Custom Directives](/guide/directives.html#Writing_a_Custom_Directive).
+A hash of directives to be made available to the ViewModel. For details on how to write a custom directive, see [Writing Custom Directives](/vuejs.org/guide/directives.html#Writing_a_Custom_Directive).
 
 ### filters
 
 - **Type:** `Object`
 
-A hash of filters to be made available to the ViewModel. For details on how to write a custom filter, see [Writing Custom Filters](/guide/filters.html#Writing_a_Custom_Filter).
+A hash of filters to be made available to the ViewModel. For details on how to write a custom filter, see [Writing Custom Filters](/vuejs.org/guide/filters.html#Writing_a_Custom_Filter).
 
 ### components
 
 - **Type:** `Object`
 
-A hash of components to be made available to the ViewModel. For details on how to extend and compose ViewModels, see [Composing ViewModels](/guide/composition.html).
+A hash of components to be made available to the ViewModel. For details on how to extend and compose ViewModels, see [Composing ViewModels](/vuejs.org/guide/composition.html).
 
 ### partials
 
 - **Type:** `Object`
 
-A hash of partials to be made available to the ViewModel. Also see [v-partial](/api/directives.html#v-partial).
+A hash of partials to be made available to the ViewModel. Also see [v-partial](/vuejs.org/api/directives.html#v-partial).
 
 ### transitions
 
 - **Type:** `Object`
 
-A hash of transitions to be made available to the ViewModel. For details see [Adding Transition Effects](/guide/transitions.html).
+A hash of transitions to be made available to the ViewModel. For details see [Adding Transition Effects](/vuejs.org/guide/transitions.html).
 
 ## Others
 
@@ -253,7 +253,7 @@ A parent ViewModel instance. Passing in this option establishes a parent-child r
 
 1. The child can bind to data from the parent's scope in its template;
 2. The child can access the parent as `this.$parent`;
-3. The parent and child can communicate using the [Event Communication Methods](/api/instance-methods.html#Cross-ViewModel_Events).
+3. The parent and child can communicate using the [Event Communication Methods](/vuejs.org/api/instance-methods.html#Cross-ViewModel_Events).
 4. When the parent is destroyed, the child will be destroyed too.
 
 This option is useful when you need to manually manage the lifecycle of nested ViewModels for better memory control.

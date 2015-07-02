@@ -27,7 +27,7 @@ Here the prefix is `v` which is the default. The directive ID is `text` and the 
 
 Here we are using a computed expression instead of a single property key. Vue.js automatically tracks the properties an expression depends on and refreshes the directive whenever a dependency changes. Thanks to async batch updates, even when multiple dependencies change, an expression will only be updated once every event loop.
 
-You should use expressions wisely and avoid putting too much logic in your templates, especially statements with side effects (with the exception of event listener expressions). To discourage the overuse of logic inside templates, Vue.js inline expressions are limited to **one statement only**. For bindings that require more complicated operations, use [Computed Properties](/guide/computed.html) instead.
+You should use expressions wisely and avoid putting too much logic in your templates, especially statements with side effects (with the exception of event listener expressions). To discourage the overuse of logic inside templates, Vue.js inline expressions are limited to **one statement only**. For bindings that require more complicated operations, use [Computed Properties](/vuejs.org/guide/computed.html) instead.
 
 <p class="tip">For security reasons, in inline expressions you can only access properties and methods present on the current context ViewModel and its parents.</p>
 
@@ -41,7 +41,7 @@ Some directives require an argument before the keypath or expression. In this ex
 
 ## Filters
 
-Filters can be appended to directive keypaths or expressions to further process the value before updating the DOM. Filters are denoted by a single pipe (`|`) as in shell scripts. For more details see [Filters in Depth](/guide/filters.html).
+Filters can be appended to directive keypaths or expressions to further process the value before updating the DOM. Filters are denoted by a single pipe (`|`) as in shell scripts. For more details see [Filters in Depth](/vuejs.org/guide/filters.html).
 
 ## Multiple Clauses
 
@@ -72,9 +72,9 @@ Since Vue.js 0.10, you can also use mustache expressions inside literal directiv
 <div v-component="{&#123; isOwner ? 'owner-panel' : 'guest-panel' &#125;}"></div>
 ```
 
-However, note that mustache expressions inside literal directives are evaluated **only once**. After the directive has been compiled, it will no longer react to value changes. To dynamically instantiate different components at run time, use the [v-view](/api/directives.html#v-view) directive.
+However, note that mustache expressions inside literal directives are evaluated **only once**. After the directive has been compiled, it will no longer react to value changes. To dynamically instantiate different components at run time, use the [v-view](/vuejs.org/api/directives.html#v-view) directive.
 
-A full list of literal directives can be found in the [API reference](/api/directives.html#Literal_Directives).
+A full list of literal directives can be found in the [API reference](/vuejs.org/api/directives.html#Literal_Directives).
 
 ## Empty Directives
 
@@ -86,7 +86,7 @@ Some directives don't even expect an attribute value - they simply do something 
 </div>
 ```
 
-A full list of empty directives can be found in the [API reference](/api/directives.html#Empty_Directives).
+A full list of empty directives can be found in the [API reference](/vuejs.org/api/directives.html#Empty_Directives).
 
 ## Writing a Custom Directive
 
@@ -235,4 +235,4 @@ Vue.directive('my-handler', {
 
 Passing in `isFn:true` also enables your custom directive to accept inline expressions like `v-on` does. For more comprehensive examples, check out `src/directives/` in the source code.
 
-Next: [Filters in Depth](/guide/filters.html).
+Next: [Filters in Depth](/vuejs.org/guide/filters.html).

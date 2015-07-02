@@ -25,7 +25,7 @@ An object that syncs the Model and the View. In Vue.js, ViewModels are instantia
 var vm = new Vue({ /* options */ })
 ```
 
-This is the primary object that you will be interacting with as a developer when using Vue.js. For more details see [Class: Vue](/api/).
+This is the primary object that you will be interacting with as a developer when using Vue.js. For more details see [Class: Vue](/vuejs.org/api/).
 
 ### View
 
@@ -49,7 +49,7 @@ In Vue.js, models are simply plain JavaScript objects, or **data objects**. You 
 
 The data objects are mutated in place, so modifying it by reference has the same effects as modifying `vm.$data`. This also makes it easy for multiple ViewModel instances to observe the same piece of data.
 
-For technical details see [Instantiation Options: data](/api/instantiation-options.html#data).
+For technical details see [Instantiation Options: data](/vuejs.org/api/instantiation-options.html#data).
 
 ### Directives
 
@@ -87,11 +87,11 @@ Functions that are used to process the raw values before updating the View. They
 <div>&#123;&#123;message | capitalize&#125;&#125;</div>
 ```
 
-Now before the div's textContent is updated, the `message` value will first be passed through the `capitalize` function. For more details see [Filters in Depth](/guide/filters.html).
+Now before the div's textContent is updated, the `message` value will first be passed through the `capitalize` function. For more details see [Filters in Depth](/vuejs.org/guide/filters.html).
 
 ### Components
 
-In Vue.js, a component is simply a ViewModel constructor registered with an ID using `Vue.component(ID, constructor)`. By having an associated ID, they can be nested in other ViewModels' templates with the `v-component` directive. This simple mechanism enables declarative reuse and composition of ViewModels in a fashion similar to [Web Components](http://www.w3.org/TR/components-intro/), without the need for latest browsers or heavy polyfills. By breaking an application into smaller components, the result is a highly decoupled and maintainable codebase. For more details, see [Composing ViewModels](/guide/composition.html).
+In Vue.js, a component is simply a ViewModel constructor registered with an ID using `Vue.component(ID, constructor)`. By having an associated ID, they can be nested in other ViewModels' templates with the `v-component` directive. This simple mechanism enables declarative reuse and composition of ViewModels in a fashion similar to [Web Components](http://www.w3.org/TR/components-intro/), without the need for latest browsers or heavy polyfills. By breaking an application into smaller components, the result is a highly decoupled and maintainable codebase. For more details, see [Composing ViewModels](/vuejs.org/guide/composition.html).
 
 ## A Quick Example
 
@@ -154,7 +154,7 @@ Also available on [jsfiddle](http://jsfiddle.net/yyx990803/yMv7y/).
 
 You can click on a todo to toggle it, or you can open your Browser's console and play with the `demo` object - for example, change `demo.title`, push a new object into `demo.todos`, or toggle a todo's `done` state.
 
-You probably have a few questions in mind now - don't worry, we'll cover them soon. Next up: [Directives in Depth](/guide/directives.html).
+You probably have a few questions in mind now - don't worry, we'll cover them soon. Next up: [Directives in Depth](/vuejs.org/guide/directives.html).
 
 [AngularJS]: http://angularjs.org
 [KnockoutJS]: http://knockoutjs.com
